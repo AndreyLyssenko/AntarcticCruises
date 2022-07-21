@@ -1,0 +1,88 @@
+.cruises {
+  width: 1130px;
+  margin: 0 auto 120px;
+}
+
+.cruises__header {
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 51px;
+  text-align: center;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  gap: 30px;
+}
+
+.cruises__img {
+  display: block;
+}
+
+.cruises__item {
+  position: relative;
+
+  &:hover {
+    .cruises__wrapper {
+      box-sizing: border-box;
+      color: $title-white;
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      top: 0;
+      left: 0;
+      padding: 73px 25px 35px;
+      display: flex;
+      flex-direction: column;
+      background-color: $main-blue;
+      z-index: 2;
+    }
+
+    .cruises__card-header {
+      bottom: unset;
+      top: 0;
+      left: 0;
+      margin: 35px 0 0 25px;
+    }
+  }
+}
+
+.cruises__wrapper {
+  display: none;
+}
+
+.cruises__card-header {
+  color: $title-white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 30px 30px;
+  z-index: 3;
+}
+
+.cruises__title {
+  margin: 0;
+  font-weight: 500;
+}
+
+.cruises__text {
+  display: block;
+  color: $text-white;
+  margin: 0 0 10px;
+
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
+}
+
+.cruises__button {
+  margin-top: auto;
+}
