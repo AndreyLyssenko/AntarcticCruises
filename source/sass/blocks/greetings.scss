@@ -1,0 +1,52 @@
+.greetings {
+  position: relative;
+  width: 100%;
+  color: $title-white;
+  background-color: $main-blue;
+  padding-top: 178px;
+  padding-bottom: 270px;
+  margin-bottom: 120px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: inherit;
+    height: 650px;
+    top: -108px;
+    left: 0;
+    background-color: $main-blue;
+    background-image: url("../img/decoration/bg-greetings-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decoration/bg-greetings-desktop@2x.jpg");
+    }
+  }
+}
+
+.greetings__wrapper {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.greetings__header {
+  z-index: 1;
+  margin: 0;
+  font-size: 54px;
+  line-height: 66px;
+  min-height: 39px;
+}
+
+.greetings__text {
+  z-index: 1;
+  margin: 0;
+  font-size: 20px;
+  line-height: 25px;
+}

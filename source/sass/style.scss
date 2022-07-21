@@ -1,2 +1,15 @@
-// Vendor
-@import "vendor/normalize";
+@import "vendor/normalize.scss";
+@import "general/fonts.scss";
+@import "general/variables.scss";
+@import "general/general.scss";
+@import "general/helpers.scss";
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/navigation.scss";
+@import "blocks/greetings.scss";
+@import "blocks/promo.scss";
+@import "blocks/advantages.scss";
+@import "blocks/cruises.scss";
+@import "blocks/booking.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";

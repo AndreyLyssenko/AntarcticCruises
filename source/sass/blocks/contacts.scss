@@ -1,0 +1,53 @@
+.contacts {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 120px;
+}
+
+.contacts__map {
+  border: none;
+  margin-right: auto;
+}
+
+.contacts__wrapper {
+  width: 500px;
+}
+
+.contacts__title {
+  margin: 0 0 45px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__text {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 28px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 0;
+  }
+
+  &--adress {
+    &::after {
+      width: 18px;
+      height: 22px;
+      background-image: url("../img/svg/contacts-adress.svg");
+    }
+  }
+
+  &--tel {
+    &::after {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/svg/contacts-tel.svg");
+    }
+  }
+}
