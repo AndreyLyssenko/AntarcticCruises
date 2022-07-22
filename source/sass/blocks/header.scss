@@ -5,4 +5,12 @@
 .header__wrapper {
   width: 1366px;
   margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    width: 768px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 320px;
+  }
 }

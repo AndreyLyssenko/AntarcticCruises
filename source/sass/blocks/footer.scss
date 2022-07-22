@@ -10,6 +10,17 @@
   align-items: center;
   display: flex;
   color: $title-white;
+
+  @media (max-width: $desktop-width) {
+    width: 678px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 40px 0;
+    width: 290px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .footer__logo-link {
@@ -17,10 +28,28 @@
   width: 70px;
   height: 38px;
   margin-right: 40px;
+
+  @media (max-width: $desktop-width) {
+    width: 38px;
+    height: 32px;
+    margin-right: 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 42px;
+    height: 22px;
+  }
 }
 
 .footer__logo {
   fill: $title-white;
+
+  @media (max-width: $desktop-width) {
+    width: 38px;
+    height: 32px;
+  }
 }
 
 .footer__navigation-list {
@@ -30,6 +59,17 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 700px;
+
+  @media (max-width: $desktop-width) {
+    max-width: 450px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 290px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
 }
 
 .footer__navigation-item {
@@ -38,11 +78,29 @@
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media (max-width: $desktop-width) {
+    margin-right: 23px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+    margin-right: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .footer__navigation-link {
   color: $title-white;
   text-decoration: none;
+
+  @media (max-width: $desktop-width) {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 
@@ -61,6 +119,31 @@
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media (max-width: $desktop-width) {
+    &--facebook {
+      width: 9px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--twitter {
+      width: 16px;
+      height: 13px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 23px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 .footer__social-link {
@@ -71,4 +154,6 @@
 
 .footer__social-logo {
   fill: $title-white;
+  width: 100%;
+  height: 100%;
 }
