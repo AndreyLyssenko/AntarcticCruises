@@ -1,13 +1,35 @@
 .cruises {
   width: 1130px;
   margin: 0 auto 120px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 100px;
+    width: 648px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 65px;
+    width: 290px;
+  }
 }
 
 .cruises__header {
   font-size: 28px;
   line-height: 42px;
+  margin: 0;
   margin-bottom: 51px;
   text-align: center;
+
+  @media (max-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
 }
 
 .cruises__list {
@@ -18,10 +40,26 @@
   display: grid;
   grid-template-columns: repeat(4, 260px);
   gap: 30px;
+
+  @media (max-width: $desktop-width) {
+    grid-template-columns: repeat(2, 309px);
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .cruises__img {
   display: block;
+  object-fit: cover;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .cruises__item {
@@ -48,6 +86,21 @@
       top: 0;
       left: 0;
       margin: 35px 0 0 25px;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 309px;
+    height: 386px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 270px;
+    height: 386px;
+    margin: 0 auto 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }
@@ -85,4 +138,12 @@
 
 .cruises__button {
   margin-top: auto;
+
+  @media (max-width: $desktop-width) {
+    width: 239px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 220px;
+  }
 }

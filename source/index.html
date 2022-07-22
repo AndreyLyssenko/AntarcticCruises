@@ -11,13 +11,13 @@
   <body class="page__body">
     <header class="header">
       <div class="header__wrapper">
-        <nav class="navigation">
-          <a class="navigation__logo-link">
+        <nav class="navigation navigation--no-js">  <!-- navigation--no-js -->
+          <a class="navigation__logo-link navigation__logo-link--no-js"> <!-- navigation__logo-link--no-js -->
             <svg class="navigation__logo" width="70" height="38" viewBox="0 0 70 38" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <button class="navigation__button navigation__button--no-js" type="button">
+          <button class="navigation__button navigation__button--no-js" type="button"> <!--navigation__button--no-js-->
             <span class="visually-hidden">Открыть меню навигации</span>
             <svg class="navigation__icon navigation__icon--closed" width="24" height="14" viewBox="0 0 24 14" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#navigation-icon-closed"></use>
@@ -26,7 +26,7 @@
               <use xlink:href="img/sprite.svg#navigation-icon-opened"></use>
             </svg>
           </button>
-          <ul class="navigation__list navigation__list--no-js">
+          <ul class="navigation__list navigation__list--no-js"> <!-- navigation__list--no-js-->
             <li class="navigation__item">
               <a class="navigation__link" href="#advantages">Преимущества</a>
             </li>
@@ -44,7 +44,7 @@
       </div>
     </header>
     <main class="page__main">
-      <section class="greetings">
+      <section class="greetings greetings--no-js"> <!--greetings--no-js-->
         <div class="greetings__wrapper">
           <h1 class="greetings__header">Круизы в Антарктику</h1>
           <p class="greetings__text">Волшебный мир айсбергов и пингвинов</p>
@@ -53,7 +53,7 @@
       <section class="promo">
         <div class="promo__wrapper">
           <h2 class="promo__header">Путешествие на край Земли</h2>
-          <p class="promo__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          <p class="promo__text">Это волшебное путешествие поможет вам познакомиться поближе<br class="promo__break"> с удивительным миром Антарктики. Наш круизный лайнер отвезет вас<br class="promo__break"> на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
         </div>
         <img class="promo__img" src="img/content/promo/promo-penguin-desktop.jpg" srcset="img/content/promo/promo-penguin-desktop@2x.jpg 2x" width="560" height="301" alt="Пингвины Антарктики">
       </section>
@@ -62,17 +62,17 @@
           <h2 class="advantages__header">Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--ship">
-              <h3 class="advantages__title">Небольшой круизный лайнер</h3>
+              <h3 class="advantages__title">Небольшой<br class="advantages__break advantages__break--mobile"> круизный лайнер</h3>
               <p class="advantages__text">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
             </li>
             <li class="advantages__item advantages__item--all-inclusive">
-              <h3 class="advantages__title">Система все включено</h3>
+              <h3 class="advantages__title">Система<br class="advantages__break advantages__break--mobile"> все включено</h3>
               <p class="advantages__text">Все наши круизы работают по системе “Все Включено”.</p>
-              <p class="advantages__text">Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+              <p class="advantages__text">Великолепные блюда и безлимитный бар доступны для вас<br class="advantages__break"> 24 часа.</p>
             </li>
             <li class="advantages__item advantages__item--zodiac">
               <h3 class="advantages__title">Экскурсионные туры на Zodiac</h3>
-              <p class="advantages__text">Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+              <p class="advantages__text">Экскурсионные туры к берегам Антарктиды совершаются<br class="advantages__break advantages__break--mobile"> на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
             </li>
           </ul>
         </div>
@@ -206,10 +206,10 @@
         <div class="booking__wrapper">
           <div class="booking__text-wrapper">
             <h2 class="booking__header">Раннее бронирование</h2>
-            <p class="booking__text">Забронируйте тур за 3-6 месяцев&nbsp;<br>до даты выезда и сэкономьте до 50%</p>
+            <p class="booking__text">Забронируйте тур за 3-6 месяцев&nbsp;<br class="booking__break">до даты выезда и сэкономьте до 50%</p>
           </div>
           <form class="booking__form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="booking__form-title">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+            <p class="booking__form-title">Оставьте заявку<br class="booking__break booking__break--form"> и мы свяжемся с вами в ближайшее время</p>
             <label class="visually-hidden" for="name">Ваше имя:</label>
             <input class="booking__input" type="text" name="name" id="name" required placeholder="Имя">
             <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
@@ -230,7 +230,7 @@
         <iframe class="contacts__map" width="560" height="306" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1658308530061!5m2!1sru!2sru"></iframe>
         <div class="contacts__wrapper">
           <p class="contacts__title">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
-          <p class="contacts__text contacts__text--adress">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
+          <p class="contacts__text contacts__text--adress">г. Санкт Петербург,<br class="contacts__break"> ул. Большая Конюшенная, 19/8</p>
           <p class="contacts__text contacts__text--tel">8-800-200-00-00</p>
         </div>
       </section>
@@ -259,7 +259,7 @@
         </ul>
         <span class="visually-hidden">Мы в социальных сетях:</span>
         <ul class="footer__social-list">
-          <li class="footer__social-item">
+          <li class="footer__social-item footer__social-item--facebook">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">FaceBook</span>
               <svg class="footer__social-logo" width="11" height="20" viewBox="0 0 11 20" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -267,7 +267,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer__social-item">
+          <li class="footer__social-item footer__social-item--insta">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">Instagram</span>
               <svg class="footer__social-logo" width="21" height="20" viewBox="0 0 21 20" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +275,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer__social-item">
+          <li class="footer__social-item footer__social-item--twitter">
             <a class="footer__social-link" href="#">
               <span class="visually-hidden">Twitter</span>
               <svg class="footer__social-logo" width="20" height="17" viewBox="0 0 20 17" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -286,5 +286,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/main.min.js" type="module" async></script>
   </body>
 </html>
