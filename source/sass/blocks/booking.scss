@@ -21,7 +21,7 @@
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/decoration/bg-form-mobile.jpg");
-    margin-bottom: 65px;
+    margin-bottom: 58px;
 
     @media (min-resolution: 2dppx) and (max-width: $tablet-width) {
       background-image: url("../img/decoration/bg-form-mobile@2x.jpg");
@@ -33,17 +33,16 @@
   width: 1040px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   padding: 50px 0;
 
   @media (max-width: $desktop-width) {
     width: 420px;
     flex-direction: column;
-    padding: 100px 0;
+    padding: 88px 0 100px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 65px 0;
+    padding: 59px 0 65px;
     width: 290px;
   }
 }
@@ -51,14 +50,40 @@
 .booking__text-wrapper {
   width: 500px;
   margin-right: auto;
+  margin-top: 163px;
 
   @media (max-width: $desktop-width) {
     width: 100%;
+    margin-top: 0;
+    margin-left: 5px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.booking__break {
+  display: none;
+
+  &--desktop {
+    display: inline;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: inline;
+    }
   }
 }
 
 .booking__header {
   margin: 0;
+  margin-bottom: 8px;
   font-size: 40px;
   line-height: 60px;
 
@@ -69,6 +94,9 @@
 
   @media (max-width: $tablet-width) {
     text-align: center;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 14px;
   }
 }
 
@@ -80,11 +108,14 @@
 
   @media (max-width: $desktop-width) {
     text-align: center;
-    margin: 0 auto 60px;
+    margin: 0 auto 49px;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
+    width: 260px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 34px;
   }
 }
 
@@ -93,18 +124,24 @@
   min-height: 455px;
   box-sizing: border-box;
   display: flex;
-  padding: 50px 0;
+  padding: 44px 0;
   flex-direction: column;
   background-color: $main-blue;
   color: $title-white;
 
+  @media (max-width: $desktop-width) {
+    margin-left: 13px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 290px;
+    margin-left: 0;
+    padding: 34px 0 40px;
   }
 }
 
 .booking__form-title {
-  margin: 0 0 32px 0;
+  margin: 0 0 27px 0;
   padding: 0 48px 0 50px;
   font-weight: 500;
   font-size: 18px;
@@ -112,19 +149,10 @@
 
   @media (max-width: $tablet-width) {
     text-align: center;
+    line-height: 25px;
     padding: 0;
-    width: 250px;
-    margin: 0 auto 32px auto;
-  }
-}
-
-.booking__break {
-  @media (max-width: $tablet-width) {
-    display: none;
-
-    &--form {
-      display: inline;
-    }
+    width: 228px;
+    margin: 0 auto 29px;
   }
 }
 
@@ -139,34 +167,49 @@
   color: $main-blue;
 
   &:last-of-type {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   @media (max-width: $tablet-width) {
     width: 230px;
+
+    &:last-of-type {
+      margin-bottom: 18px;
+    }
   }
 }
 
 .booking__checkbox-label {
-  padding-left: 50px;
+  position: relative;
+  margin-left: 73px;
   font-size: 10px;
   line-height: 13px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   display: flex;
   align-items: center;
 
   @media (max-width: $tablet-width) {
     width: 162px;
+    margin-left: 58px;
+    margin-bottom: 26px;
   }
 }
 
 .booking__checkbox-marker {
-  position: relative;
+  position: absolute;
   display: block;
   width: 18px;
   height: 18px;
-  margin-right: 5px;
+  top: -3px;
+  left: -23px;
   background-color: $title-white;
+
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -28px;
+  }
 }
 
 .booking__checkbox:checked + .booking__checkbox-marker::after {
@@ -185,6 +228,7 @@
 .booking__button {
   width: 303px;
   margin: 0 auto;
+  height: 43px;
 
   @media (max-width: $tablet-width) {
     width: 230px;
