@@ -3,9 +3,9 @@
   width: 100%;
   color: $title-white;
   background-color: $main-blue;
-  padding-top: 178px;
+  padding-top: 165px;
   padding-bottom: 270px;
-  margin-bottom: 120px;
+  margin-bottom: 127px;
 
   &::before {
     content: "";
@@ -45,16 +45,17 @@
   }
 
   @media (max-width: $desktop-width) {
-    padding: 195px 0 253px;
+    padding: 189px 0 274px;
+    margin-bottom: 92px;
 
     &::before {
-      height: 638px;
+      height: 667px;
     }
   }
 
   @media (max-width: $tablet-width) {
-    padding: 100px 0 147px;
-    margin-bottom: 65px;
+    padding: 114px 0 178px;
+    margin-bottom: 57px;
 
     &--no-js {
       padding: 0 0 185px;
@@ -68,13 +69,13 @@
 }
 
 .greetings__wrapper {
-  width: 900px;
+  width: 969px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
-    width: 678px;
+    width: 668px;
   }
 
   @media (max-width: $tablet-width) {
@@ -84,7 +85,7 @@
 
 .greetings__header {
   position: relative;
-  margin: 0;
+  margin: 0 0 9px 0;
   font-size: 54px;
   line-height: 66px;
   min-height: 39px;
@@ -92,6 +93,7 @@
   @media (max-width: $desktop-width) {
     font-size: 50px;
     line-height: 60px;
+    margin-bottom: 12px;
   }
 
   @media (max-width: $tablet-width) {
@@ -114,5 +116,13 @@
   @media (max-width: $tablet-width) {
     font-size: 16px;
     width: 230px;
+  }
+}
+
+.greetings__break {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: inline;
   }
 }

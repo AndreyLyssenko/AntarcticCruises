@@ -16,19 +16,22 @@
 .cruises__header {
   font-size: 28px;
   line-height: 42px;
+  font-weight: 600;
   margin: 0;
-  margin-bottom: 51px;
+  margin-bottom: 49px;
   text-align: center;
 
   @media (max-width: $desktop-width) {
     font-size: 26px;
     line-height: 39px;
+    margin-left: 6px;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-left: 0;
   }
 }
 
@@ -43,12 +46,14 @@
 
   @media (max-width: $desktop-width) {
     grid-template-columns: repeat(2, 309px);
+    margin-left: 4px;
   }
 
   @media (max-width: $tablet-width) {
     display: flex;
     flex-direction: column;
     gap: 0;
+    margin-left: 0;
   }
 }
 
@@ -74,7 +79,7 @@
       min-height: 100%;
       top: 0;
       left: 0;
-      padding: 73px 25px 35px;
+      padding: 69px 25px 35px;
       display: flex;
       flex-direction: column;
       background-color: $main-blue;
@@ -85,13 +90,23 @@
       bottom: unset;
       top: 0;
       left: 0;
-      margin: 35px 0 0 25px;
+      margin: 30px 0 0 25px;
     }
   }
 
   @media (max-width: $desktop-width) {
     width: 309px;
     height: 386px;
+
+    &:hover {
+      .cruises__wrapper {
+        padding-left: 35px;
+      }
+
+      .cruises__card-header {
+        margin-left: 35px;
+      }
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -101,6 +116,16 @@
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      .cruises__wrapper {
+        padding-left: 25px;
+      }
+
+      .cruises__card-header {
+        margin-left: 25px;
+      }
     }
   }
 }
@@ -117,8 +142,16 @@
   margin: 0;
   position: absolute;
   bottom: 0;
-  margin: 0 0 30px 30px;
+  margin: 0 0 22px 30px;
   z-index: 3;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 27px 35px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 17px 25px;
+  }
 }
 
 .cruises__title {
@@ -129,7 +162,7 @@
 .cruises__text {
   display: block;
   color: $text-white;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 
   &:last-of-type {
     margin-bottom: 5px;
