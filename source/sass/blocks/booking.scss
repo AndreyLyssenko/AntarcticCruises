@@ -156,46 +156,57 @@
   }
 }
 
-.booking__input {
-  width: 303px;
-  height: 43px;
-  padding: 11px 16px;
-  box-sizing: border-box;
+.booking__form-input {
   margin: 0 auto 20px;
-  font-size: 14px;
-  line-height: 21px;
-  color: $main-blue;
 
   &:last-of-type {
     margin-bottom: 23px;
   }
 
   @media (max-width: $tablet-width) {
-    width: 230px;
-
     &:last-of-type {
       margin-bottom: 18px;
     }
   }
 }
 
-.booking__checkbox-label {
-  position: relative;
-  margin-left: 73px;
-  font-size: 10px;
-  line-height: 13px;
-  margin-bottom: 32px;
-  display: flex;
-  align-items: center;
+.booking__form-input input {
+  width: 303px;
+  height: 43px;
+  padding: 11px 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 21px;
+  color: $main-blue;
 
   @media (max-width: $tablet-width) {
-    width: 162px;
+    width: 230px;
+  }
+}
+
+.booking__form-checkbox {
+  margin-bottom: 32px;
+  margin-left: 73px;
+
+  @media (max-width: $tablet-width) {
     margin-left: 58px;
     margin-bottom: 26px;
   }
 }
 
-.booking__checkbox-marker {
+.booking__form-checkbox label {
+  position: relative;
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    width: 162px;
+  }
+}
+
+.booking__form-checkbox span {
   position: absolute;
   display: block;
   width: 18px;
@@ -212,7 +223,7 @@
   }
 }
 
-.booking__checkbox:checked + .booking__checkbox-marker::after {
+.booking__form-checkbox input:checked + span::after {
   content: "";
   position: absolute;
   display: block;

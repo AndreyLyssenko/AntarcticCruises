@@ -57,7 +57,7 @@
   }
 }
 
-.cruises__img {
+.cruises__item img {
   display: block;
   object-fit: cover;
 
@@ -86,7 +86,7 @@
       z-index: 2;
     }
 
-    .cruises__card-header {
+    h3 {
       bottom: unset;
       top: 0;
       left: 0;
@@ -134,12 +134,11 @@
   display: none;
 }
 
-.cruises__card-header {
+.cruises__item h3 {
   color: $title-white;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin: 0;
   position: absolute;
   bottom: 0;
   margin: 0 0 22px 30px;
@@ -154,12 +153,12 @@
   }
 }
 
-.cruises__title {
+.cruises__item h4 {
   margin: 0;
   font-weight: 500;
 }
 
-.cruises__text {
+.cruises__item p {
   display: block;
   color: $text-white;
   margin: 0 0 12px;

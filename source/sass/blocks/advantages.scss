@@ -105,7 +105,7 @@
   }
 
   &--ship {
-    .advantages__text{
+    .advantages__text {
       width: 290px;
     }
 
@@ -158,7 +158,7 @@
     }
 
     &--ship {
-      .advantages__text{
+      .advantages__text {
         width: 154px;
       }
 
@@ -266,21 +266,21 @@
   }
 
   @media (max-width: $desktop-width) {
-    &--desktop{
+    &--desktop {
       display: none;
     }
 
-    &--tablet{
+    &--tablet {
       display: inline;
     }
   }
 
   @media (max-width: $tablet-width) {
-    &--tablet{
+    &--tablet {
       display: none;
     }
 
-    &--mobile{
+    &--mobile {
       display: inline;
     }
   }

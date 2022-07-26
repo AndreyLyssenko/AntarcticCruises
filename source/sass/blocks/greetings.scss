@@ -28,6 +28,8 @@
     }
 
     @media (max-width: $desktop-width) {
+      height: 639px;
+      top: -81px;
       background-image: url("../img/decoration/bg-greetings-tablet.jpg");
 
       @media (min-resolution: 2dppx) and (max-width: $desktop-width) {
@@ -36,6 +38,8 @@
     }
 
     @media (max-width: $tablet-width) {
+      height: 501px;
+      top: -63px;
       background-image: url("../img/decoration/bg-greetings-mobile.jpg");
 
       @media (min-resolution: 2dppx) and (max-width: $tablet-width) {
@@ -47,10 +51,6 @@
   @media (max-width: $desktop-width) {
     padding: 189px 0 274px;
     margin-bottom: 92px;
-
-    &::before {
-      height: 667px;
-    }
   }
 
   @media (max-width: $tablet-width) {
@@ -59,11 +59,6 @@
 
     &--no-js {
       padding: 0 0 185px;
-    }
-
-    &::before {
-      height: 500px;
-      top: -120px;
     }
   }
 }
