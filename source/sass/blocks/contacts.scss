@@ -92,7 +92,8 @@
   }
 
   &--adress {
-    letter-spacing: -.01rem;
+    letter-spacing: -0.01rem;
+
     &::before {
       top: 0;
       width: 18px;
@@ -102,7 +103,8 @@
   }
 
   &--tel {
-    letter-spacing: .01rem;
+    letter-spacing: 0.01rem;
+
     &::before {
       width: 18px;
       height: 18px;

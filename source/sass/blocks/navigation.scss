@@ -115,6 +115,7 @@
 
   @media (max-width: $tablet-width) {
     display: none;
+
     &--opened {
       display: block;
       position: absolute;
