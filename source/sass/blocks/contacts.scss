@@ -5,14 +5,16 @@
   margin-bottom: 120px;
 
   @media (max-width: $desktop-width) {
-    width: 678px;
-    margin-bottom: 100px;
+    width: auto;
+    padding: 0 41px 49px;
+    margin-bottom: 51px;
+    box-sizing: border-box;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
     margin-bottom: 59px;
     flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -21,12 +23,18 @@
   margin-right: auto;
 
   @media (max-width: $desktop-width) {
-    width: 324px;
+    width: auto;
+    min-width: 328px;
     height: 335px;
+    margin-right: 30px;
+    box-sizing: border-box;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
+    min-width: auto;
+    max-width: inherit;
+    margin: 0 15px;
+    box-sizing: border-box;
     height: 316px;
     order: 2;
   }
@@ -37,14 +45,14 @@
   margin-top: 75px;
 
   @media (max-width: $desktop-width) {
-    width: 324px;
+    width: auto;
+    margin-right: 0;
     margin-top: 66px;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
-    margin-bottom: 43px;
-    margin-top: 0;
+    padding: 0 15px;
+    margin: 0 auto 43px;
   }
 }
 
@@ -61,7 +69,6 @@
 
   @media (max-width: $tablet-width) {
     margin-left: 0;
-    width: 285px;
   }
 }
 
@@ -76,7 +83,7 @@
     margin-bottom: 0;
   }
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     display: block;
@@ -85,7 +92,8 @@
   }
 
   &--adress {
-    &::after {
+    letter-spacing: -.01rem;
+    &::before {
       top: 0;
       width: 18px;
       height: 22px;
@@ -94,7 +102,8 @@
   }
 
   &--tel {
-    &::after {
+    letter-spacing: .01rem;
+    &::before {
       width: 18px;
       height: 18px;
       background-image: url("../img/svg/contacts-tel.svg");
@@ -105,14 +114,14 @@
     padding-left: 32px;
 
     &--adress {
-      &::after {
+      &::before {
         top: 5px;
         left: 4px;
       }
     }
 
     &--tel {
-      &::after {
+      &::before {
         top: 3px;
         left: 4px;
       }
@@ -123,29 +132,15 @@
     padding-left: 28px;
 
     &--adress {
-      &::after {
+      &::before {
         left: 0;
       }
     }
 
     &--tel {
-      &::after {
+      &::before {
         left: 0;
       }
-    }
-  }
-}
-
-.contacts__break {
-  display: none;
-
-  @media (max-width: $desktop-width) {
-    display: inline;
-  }
-
-  @media (max-width: $tablet-width) {
-    &--tablet {
-      display: none;
     }
   }
 }

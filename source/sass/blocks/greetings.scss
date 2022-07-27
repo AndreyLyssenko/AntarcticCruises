@@ -1,5 +1,4 @@
 .greetings {
-  position: relative;
   width: 100%;
   color: $title-white;
   background-color: $main-blue;
@@ -7,20 +6,20 @@
   padding-bottom: 270px;
   margin-bottom: 127px;
 
+
   &::before {
     content: "";
     position: absolute;
-    z-index: 0;
     display: block;
     width: 100%;
     height: 650px;
-    top: -108px;
+    top: -1px;
     left: 0;
     background-color: $main-blue;
     background-image: url("../img/decoration/bg-greetings-desktop.jpg");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    background-size: 100%;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     @media (min-resolution: 2dppx) and (min-width: $desktop-width) {
@@ -29,7 +28,6 @@
 
     @media (max-width: $desktop-width) {
       height: 639px;
-      top: -81px;
       background-image: url("../img/decoration/bg-greetings-tablet.jpg");
 
       @media (min-resolution: 2dppx) and (max-width: $desktop-width) {
@@ -39,7 +37,6 @@
 
     @media (max-width: $tablet-width) {
       height: 501px;
-      top: -63px;
       background-image: url("../img/decoration/bg-greetings-mobile.jpg");
 
       @media (min-resolution: 2dppx) and (max-width: $tablet-width) {
@@ -64,22 +61,25 @@
 }
 
 .greetings__wrapper {
+  position: relative;
+  z-index: 1;
   width: 969px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
-    width: 668px;
+    width: auto;
+    margin-left: 49px;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
+    min-width: 290px;
+    margin-left: 15px;
   }
 }
 
 .greetings__header {
-  position: relative;
   margin: 0 0 9px 0;
   font-size: 54px;
   line-height: 66px;
@@ -98,7 +98,6 @@
 }
 
 .greetings__text {
-  z-index: 1;
   margin: 0;
   font-size: 20px;
   line-height: 25px;
@@ -111,13 +110,5 @@
   @media (max-width: $tablet-width) {
     font-size: 16px;
     width: 230px;
-  }
-}
-
-.greetings__break {
-  display: none;
-
-  @media (max-width: $tablet-width) {
-    display: inline;
   }
 }

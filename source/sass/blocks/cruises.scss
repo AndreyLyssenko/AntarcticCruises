@@ -87,6 +87,7 @@
     }
 
     h3 {
+      z-index: 3;
       bottom: unset;
       top: 0;
       left: 0;
@@ -142,7 +143,7 @@
   position: absolute;
   bottom: 0;
   margin: 0 0 22px 30px;
-  z-index: 3;
+  z-index: 0;
 
   @media (max-width: $desktop-width) {
     margin: 0 0 27px 35px;

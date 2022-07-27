@@ -1,5 +1,6 @@
 .advantages {
   width: 100%;
+  background-color: #e3ecf6;
   background-image: url("../img/decoration/bg-advantages-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,12 +37,11 @@
 
   @media (max-width: $desktop-width) {
     padding: 90px 0 100px;
-    width: 678px;
+    width: auto;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 57px 0 64px;
-    width: 290px;
+    padding: 57px 15px 64px;
   }
 }
 
@@ -73,14 +73,20 @@
   display: grid;
   grid-template-columns: repeat(3, 360px);
   gap: 40px;
+  box-sizing: border-box;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: repeat(3, 206px);
-    margin-left: 4px;
+    min-width: 678px;
+    max-width: max-content;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    padding: 0 41px 0 49px;
     gap: 30px;
   }
 
   @media (max-width: $tablet-width) {
+    min-width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
     margin-left: 0;
@@ -89,9 +95,9 @@
 
 .advantages__item {
   position: relative;
-  width: 360px;
+  min-width: 360px;
   min-height: 241px;
-  padding: 81px 0 30px 30px;
+  padding: 81px 0 23px 30px;
   background-color: $title-white;
   box-sizing: border-box;
 
@@ -105,8 +111,8 @@
   }
 
   &--ship {
-    .advantages__text {
-      width: 290px;
+    p {
+      max-width: 290px;
     }
 
     &::before {
@@ -117,14 +123,8 @@
   }
 
   &--all-inclusive {
-    .advantages__text {
-      &:first-of-type {
-        width: 210px;
-      }
-
-      &:last-of-type {
-        width: 290px;
-      }
+    p {
+      max-width: 281px;
     }
 
     &::before {
@@ -136,8 +136,8 @@
   }
 
   &--zodiac {
-    .advantages__text {
-      width: 241px;
+    p {
+      max-width: 241px;
     }
 
     &::before {
@@ -149,17 +149,18 @@
   }
 
   @media (max-width: $desktop-width) {
-    width: 206px;
+    min-width: 206px;
+    height: max-content;
     min-height: 310px;
-    padding: 70px 0 15px 20px;
+    padding: 71px 0 15px 20px;
 
     &::before {
       left: 20px;
     }
 
     &--ship {
-      .advantages__text {
-        width: 154px;
+      p {
+        max-width: 154px;
       }
 
       &::before {
@@ -170,11 +171,12 @@
     }
 
     &--all-inclusive {
-      .advantages__text {
-        &:first-of-type,
-        &:last-of-type {
-          width: 162px;
-        }
+      h3 {
+        max-width: 197px;
+      }
+
+      p {
+        max-width: 162px;
       }
 
       &::before {
@@ -185,8 +187,12 @@
     }
 
     &--zodiac {
-      .advantages__text {
-        width: 167px;
+      h3 {
+        margin-right: 5px;
+      }
+
+      p {
+        max-width: 167px;
       }
 
       &::before {
@@ -198,23 +204,19 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
+    min-width: 290px;
     min-height: 250px;
     padding: 70px 15px 15px 20px;
 
-    .advantages__text {
-      width: auto;
+    &--ship {
+      p {
+        max-width: 255px;
+      }
     }
 
     &--all-inclusive {
-      .advantages__text {
-        &:first-of-type {
-          width: 210px;
-        }
-
-        &:last-of-type {
-          width: 249px;
-        }
+      p {
+        max-width: 232px;
       }
 
       &::before {
@@ -223,12 +225,12 @@
     }
 
     &--zodiac {
-      .advantages__title {
-        width: 151px;
+      h3 {
+        max-width: 151px;
       }
 
-      .advantages__text {
-        width: 233px;
+      p {
+        max-width: 233px;
       }
 
       &::before {
@@ -238,50 +240,22 @@
   }
 }
 
-.advantages__title {
+.advantages__item h3 {
   margin: 0 0 10px 0;
   font-weight: 500;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 25px;
 
   @media (max-width: $desktop-width) {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 }
 
-.advantages__text {
-  line-height: 18px;
+.advantages__item p {
+  line-height: 20px;
   margin: 0;
 
   @media (max-width: $desktop-width) {
     line-height: 20px;
-  }
-}
-
-.advantages__break {
-  display: none;
-
-  &--desktop {
-    display: inline;
-  }
-
-  @media (max-width: $desktop-width) {
-    &--desktop {
-      display: none;
-    }
-
-    &--tablet {
-      display: inline;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    &--tablet {
-      display: none;
-    }
-
-    &--mobile {
-      display: inline;
-    }
   }
 }
