@@ -41,7 +41,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 57px 15px 64px;
+    padding: 57px 15px 67px;
   }
 }
 
@@ -97,7 +97,7 @@
   position: relative;
   min-width: 360px;
   min-height: 241px;
-  padding: 81px 0 23px 30px;
+  padding: 81px 30px 23px;
   background-color: $title-white;
   box-sizing: border-box;
 
@@ -111,10 +111,6 @@
   }
 
   &--ship {
-    p {
-      max-width: 290px;
-    }
-
     &::before {
       width: 27px;
       height: 32px;
@@ -123,10 +119,6 @@
   }
 
   &--all-inclusive {
-    p {
-      max-width: 281px;
-    }
-
     &::before {
       top: 35px;
       width: 38px;
@@ -136,10 +128,6 @@
   }
 
   &--zodiac {
-    p {
-      max-width: 241px;
-    }
-
     &::before {
       top: 38px;
       width: 42px;
@@ -150,19 +138,14 @@
 
   @media (max-width: $desktop-width) {
     min-width: 206px;
-    height: max-content;
-    min-height: 310px;
-    padding: 71px 0 15px 20px;
+    min-height: unset;
+    padding: 70px 15px 19px 20px;
 
     &::before {
       left: 20px;
     }
 
     &--ship {
-      p {
-        max-width: 154px;
-      }
-
       &::before {
         width: 21px;
         height: 26px;
@@ -171,14 +154,6 @@
     }
 
     &--all-inclusive {
-      h3 {
-        max-width: 197px;
-      }
-
-      p {
-        max-width: 162px;
-      }
-
       &::before {
         width: 33px;
         height: 19px;
@@ -187,14 +162,6 @@
     }
 
     &--zodiac {
-      h3 {
-        margin-right: 5px;
-      }
-
-      p {
-        max-width: 167px;
-      }
-
       &::before {
         width: 38px;
         height: 13px;
@@ -205,18 +172,10 @@
 
   @media (max-width: $tablet-width) {
     min-width: 290px;
-    min-height: 250px;
-    padding: 70px 15px 15px 20px;
-
-    &--ship {
-      p {
-        max-width: 255px;
-      }
-    }
 
     &--all-inclusive {
-      p {
-        max-width: 232px;
+      h3 {
+        padding-right: 50px;
       }
 
       &::before {
@@ -225,14 +184,6 @@
     }
 
     &--zodiac {
-      h3 {
-        max-width: 151px;
-      }
-
-      p {
-        max-width: 233px;
-      }
-
       &::before {
         top: 31px;
       }
@@ -247,7 +198,7 @@
   line-height: 25px;
 
   @media (max-width: $desktop-width) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 }
 

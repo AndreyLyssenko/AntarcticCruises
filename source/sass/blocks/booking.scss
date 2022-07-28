@@ -87,7 +87,7 @@
   }
 }
 
-.booking__text {
+.booking__text-wrapper p {
   font-size: 18px;
   line-height: 27px;
   width: 352px;
@@ -130,7 +130,7 @@
   }
 }
 
-.booking__form-title {
+.booking__form h3 {
   margin: 0 0 27px 0;
   padding: 0 48px 0 50px;
   font-weight: 500;
@@ -231,7 +231,7 @@
 .booking__button {
   width: 303px;
   margin: 0 auto;
-  height: 43px;
+  min-height: 43px;
 
   @media (max-width: $tablet-width) {
     width: 230px;

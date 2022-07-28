@@ -78,6 +78,7 @@
 
 .footer__navigation-item {
   margin-right: 33px;
+  row-gap: 10px;
 
   &:last-of-type {
     margin-right: 0;
@@ -89,6 +90,7 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
+    row-gap: 0;
 
     &:last-of-type {
       margin-bottom: 0;

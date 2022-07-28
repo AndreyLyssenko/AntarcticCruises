@@ -1,3 +1,41 @@
+.header {
+  margin-bottom: 120px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
 .header__wrapper {
   margin: 0 auto;
+  background-color: $main-blue;
+  background-image: url("../img/decoration/bg-greetings-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  @media (min-resolution: 2dppx) and (min-width: $desktop-width) {
+    background-image: url("../img/decoration/bg-greetings-desktop@2x.jpg");
+  }
+
+  @media (max-width: $desktop-width) {
+    background-image: url("../img/decoration/bg-greetings-tablet.jpg");
+
+    @media (min-resolution: 2dppx) and (max-width: $desktop-width) {
+      background-image: url("../img/decoration/bg-greetings-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/decoration/bg-greetings-mobile.jpg");
+
+    @media (min-resolution: 2dppx) and (max-width: $tablet-width) {
+      background-image: url("../img/decoration/bg-greetings-mobile@2x.jpg");
+    }
+  }
 }
