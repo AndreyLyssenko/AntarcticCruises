@@ -588,14 +588,14 @@ template {
   margin: 0 auto;
 }
 
-.greetings__header {
+.greetings__wrapper h1 {
   margin: 0 0 9px 0;
   font-size: 54px;
   line-height: 66px;
   min-height: 39px;
 }
 
-.greetings__text {
+.greetings__wrapper p {
   margin: 0;
   font-size: 20px;
   line-height: 25px;
@@ -652,7 +652,7 @@ template {
   padding: 103px 0 127px;
 }
 
-.advantages__header {
+.advantages__wrapper h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
@@ -729,7 +729,7 @@ template {
   margin: 0 auto 120px;
 }
 
-.cruises__header {
+.cruises h2 {
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
@@ -873,7 +873,7 @@ template {
   margin-top: 163px;
 }
 
-.booking__header {
+.booking__text-wrapper h2 {
   margin: 0;
   margin-bottom: 8px;
   font-size: 40px;
@@ -939,12 +939,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .booking__form-checkbox label {
@@ -1016,7 +1016,7 @@ template {
   line-height: 27px;
 }
 
-.contacts__text {
+.contacts__wrapper p {
   position: relative;
   font-size: 16px;
   line-height: 24px;
@@ -1024,37 +1024,36 @@ template {
   margin: 0 0 20px 0;
 }
 
-.contacts__text:last-of-type {
+.contacts__wrapper p:last-of-type {
   margin-bottom: 0;
 }
 
-.contacts__text::before {
-  content: "";
+.contacts__marker {
   position: absolute;
   display: block;
   top: 3px;
   left: 0;
 }
 
-.contacts__text--adress {
-  letter-spacing: -0.01rem;
-}
-
-.contacts__text--adress::before {
+.contacts__marker--adress {
   top: 0;
   width: 18px;
   height: 22px;
   background-image: url("../img/svg/contacts-adress.svg");
 }
 
-.contacts__text--tel {
-  letter-spacing: 0.01rem;
+.contacts__marker--adress + span {
+  letter-spacing: -0.01rem;
 }
 
-.contacts__text--tel::before {
+.contacts__marker--tel {
   width: 18px;
   height: 18px;
   background-image: url("../img/svg/contacts-tel.svg");
+}
+
+.contacts__marker--tel + span {
+  letter-spacing: 0.01rem;
 }
 
 .footer {
@@ -1212,13 +1211,13 @@ template {
     margin-left: 49px;
   }
 
-  .greetings__header {
+  .greetings__wrapper h1 {
     font-size: 50px;
     line-height: 60px;
     margin-bottom: 12px;
   }
 
-  .greetings__text {
+  .greetings__wrapper p {
     font-size: 18px;
     line-height: 22px;
   }
@@ -1262,7 +1261,7 @@ template {
     width: auto;
   }
 
-  .advantages__header {
+  .advantages__wrapper h2 {
     font-size: 26px;
     line-height: 39px;
     margin-left: 7px;
@@ -1322,7 +1321,7 @@ template {
     min-width: 648px;
   }
 
-  .cruises__header {
+  .cruises h2 {
     font-size: 26px;
     line-height: 39px;
     margin-left: 6px;
@@ -1372,7 +1371,7 @@ template {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 88px 170px 100px 178px;
+    padding: 88px 170px 98px 178px;
   }
 
   .booking__text-wrapper {
@@ -1384,7 +1383,7 @@ template {
     text-align: center;
   }
 
-  .booking__header {
+  .booking__text-wrapper h2 {
     font-size: 34px;
     line-height: 51px;
     margin-bottom: 5px;
@@ -1402,7 +1401,7 @@ template {
 
   .booking__form-wrapper form {
     width: 100%;
-    padding: 44px 49px 51px 50px;
+    padding: 44px 48px 51px 50px;
   }
 
   .booking__form-wrapper h3 {
@@ -1418,6 +1417,9 @@ template {
   }
 
   .booking__form-checkbox {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     margin-left: 24px;
   }
 
@@ -1449,16 +1451,16 @@ template {
     margin-left: 4px;
   }
 
-  .contacts__text {
+  .contacts__wrapper p {
     padding-left: 32px;
   }
 
-  .contacts__text--adress::before {
+  .contacts__marker--adress {
     top: 5px;
     left: 4px;
   }
 
-  .contacts__text--tel::before {
+  .contacts__marker--tel {
     top: 3px;
     left: 4px;
   }
@@ -1689,12 +1691,12 @@ template {
     margin-left: 15px;
   }
 
-  .greetings__header {
+  .greetings__wrapper h1 {
     font-size: 36px;
     line-height: 45px;
   }
 
-  .greetings__text {
+  .greetings__wrapper p {
     font-size: 16px;
     width: 230px;
   }
@@ -1747,7 +1749,7 @@ template {
     padding: 57px 15px 67px;
   }
 
-  .advantages__header {
+  .advantages__wrapper h2 {
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 30px;
@@ -1788,7 +1790,7 @@ template {
     min-width: 290px;
   }
 
-  .cruises__header {
+  .cruises h2 {
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 30px;
@@ -1829,7 +1831,7 @@ template {
     padding: 0 15px;
   }
 
-  .booking__header {
+  .booking__text-wrapper h2 {
     text-align: center;
     font-size: 24px;
     line-height: 31px;
@@ -1868,9 +1870,6 @@ template {
   .booking__form-checkbox {
     margin-bottom: 26px;
     margin-left: 28px;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
   }
 
   .booking__form-checkbox label {
@@ -1918,15 +1917,15 @@ template {
     margin-left: 0;
   }
 
-  .contacts__text {
+  .contacts__wrapper p {
     padding-left: 28px;
   }
 
-  .contacts__text--adress::before {
+  .contacts__marker--adress {
     left: 0;
   }
 
-  .contacts__text--tel::before {
+  .contacts__marker--tel {
     left: 0;
   }
 
