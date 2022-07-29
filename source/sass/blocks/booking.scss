@@ -35,16 +35,17 @@
   margin: 0 auto;
   display: flex;
   padding: 50px 0;
+  box-sizing: border-box;
 
   @media (max-width: $desktop-width) {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 88px 0 100px;
+    padding: 88px 170px 100px 178px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 59px 0 65px;
+    padding: 59px 15px 64px;
   }
 }
 
@@ -74,7 +75,6 @@
   @media (max-width: $desktop-width) {
     font-size: 34px;
     line-height: 51px;
-    margin-left: 9px;
     margin-bottom: 5px;
   }
 
@@ -82,7 +82,6 @@
     text-align: center;
     font-size: 24px;
     line-height: 31px;
-    margin-left: 0;
     margin-bottom: 14px;
   }
 }
@@ -96,19 +95,29 @@
   @media (max-width: $desktop-width) {
     width: auto;
     text-align: center;
-    margin: 0 160px 52px 169px;
+    margin-bottom: 52px;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 0 34px;
+    margin: 0 0 33px;
     min-width: min-content;
     padding: 0 10px;
   }
 }
 
-.booking__form {
+.booking__form-wrapper {
+  @media (max-width: $desktop-width) {
+    padding: 1px 9px;
+  }
+
+  @media (max-width: $tablet-width) {
+
+  }
+}
+
+.booking__form-wrapper form {
   width: 403px;
   min-height: 455px;
   box-sizing: border-box;
@@ -120,28 +129,30 @@
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 
   @media (max-width: $desktop-width) {
-    margin-left: 8px;
+    width: 100%;
+    padding: 44px 49px 51px 50px;
   }
 
   @media (max-width: $tablet-width) {
-    width: 290px;
-    margin-left: 0;
-    padding: 34px 0 40px;
+    padding: 35px 30px 40px;
   }
 }
 
-.booking__form h3 {
+.booking__form-wrapper h3 {
   margin: 0 0 27px 0;
   padding: 0 48px 0 50px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 
+  @media (max-width: $desktop-width) {
+    padding: 0;
+  }
+
   @media (max-width: $tablet-width) {
     text-align: center;
     line-height: 25px;
     padding: 0;
-    width: 228px;
     margin: 0 auto 29px;
   }
 }
@@ -153,11 +164,15 @@
     margin-bottom: 23px;
   }
 
+  @media (max-width: $desktop-width) {
+    margin: 0 0 20px;
+  }
+
   @media (max-width: $tablet-width) {
-    margin: 0 30px 20px;
+    margin: 0 0 19px;
 
     &:nth-last-of-type(2) {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
   }
 }
@@ -171,18 +186,26 @@
   line-height: 21px;
   color: $main-blue;
 
-  @media (max-width: $tablet-width) {
-    width: 230px;
+  @media (max-width: $desktop-width) {
+    width: 100%;
   }
 }
 
 .booking__form-checkbox {
   margin-bottom: 33px;
-  margin-left: 73px;
+  margin-left: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 24px;
+  }
 
   @media (max-width: $tablet-width) {
-    margin-left: 58px;
     margin-bottom: 26px;
+    margin-left: 28px;
+    justify-content: start;
   }
 }
 

@@ -742,7 +742,7 @@ template {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 100%;
+  max-width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (260px)[4];
@@ -802,6 +802,7 @@ template {
 
 .cruises__item-about {
   visibility: hidden;
+  margin: 0;
 }
 
 .cruises__wrapper {
@@ -821,7 +822,7 @@ template {
   margin: 0 0 22px 30px;
 }
 
-.cruises__item-about h4 {
+.cruises__item-about dt {
   margin: 0;
   font-weight: 500;
   color: #f9fbfd;
@@ -829,13 +830,13 @@ template {
   line-height: 20px;
 }
 
-.cruises__item-about p {
+.cruises__item-about dd {
   display: block;
   color: #d8d8d9;
   margin: 0 0 12px;
 }
 
-.cruises__item-about p:last-of-type {
+.cruises__item-about dd:last-of-type {
   margin-bottom: 0;
 }
 
@@ -862,6 +863,8 @@ template {
   display: -ms-flexbox;
   display: flex;
   padding: 50px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .booking__text-wrapper {
@@ -884,7 +887,7 @@ template {
   margin: 0;
 }
 
-.booking__form {
+.booking__form-wrapper form {
   width: 403px;
   min-height: 455px;
   -webkit-box-sizing: border-box;
@@ -903,7 +906,7 @@ template {
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 }
 
-.booking__form h3 {
+.booking__form-wrapper h3 {
   margin: 0 0 27px 0;
   padding: 0 48px 0 50px;
   font-weight: 500;
@@ -932,7 +935,16 @@ template {
 
 .booking__form-checkbox {
   margin-bottom: 33px;
-  margin-left: 73px;
+  margin-left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .booking__form-checkbox label {
@@ -1306,7 +1318,8 @@ template {
 
   .cruises {
     margin-bottom: 100px;
-    width: 648px;
+    width: auto;
+    min-width: 648px;
   }
 
   .cruises__header {
@@ -1316,9 +1329,15 @@ template {
   }
 
   .cruises__list {
-    -ms-grid-columns: (309px)[2];
-    grid-template-columns: repeat(2, 309px);
-    margin-left: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 8px;
   }
 
   .cruises__item img {
@@ -1353,7 +1372,7 @@ template {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 88px 0 100px;
+    padding: 88px 170px 100px 178px;
   }
 
   .booking__text-wrapper {
@@ -1368,18 +1387,38 @@ template {
   .booking__header {
     font-size: 34px;
     line-height: 51px;
-    margin-left: 9px;
     margin-bottom: 5px;
   }
 
   .booking__text-wrapper p {
     width: auto;
     text-align: center;
-    margin: 0 160px 52px 169px;
+    margin-bottom: 52px;
   }
 
-  .booking__form {
-    margin-left: 8px;
+  .booking__form-wrapper {
+    padding: 1px 9px;
+  }
+
+  .booking__form-wrapper form {
+    width: 100%;
+    padding: 44px 49px 51px 50px;
+  }
+
+  .booking__form-wrapper h3 {
+    padding: 0;
+  }
+
+  .booking__form-input {
+    margin: 0 0 20px;
+  }
+
+  .booking__form-input input {
+    width: 100%;
+  }
+
+  .booking__form-checkbox {
+    margin-left: 24px;
   }
 
   .contacts {
@@ -1746,7 +1785,7 @@ template {
 
   .cruises {
     margin-bottom: 65px;
-    width: 290px;
+    min-width: 290px;
   }
 
   .cruises__header {
@@ -1757,21 +1796,12 @@ template {
   }
 
   .cruises__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 0;
     margin-left: 0;
   }
 
   .cruises__item {
     width: 270px;
     height: 386px;
-    margin: 0 auto 30px;
   }
 
   .cruises__item:last-of-type {
@@ -1792,7 +1822,7 @@ template {
   }
 
   .booking__wrapper {
-    padding: 59px 0 65px;
+    padding: 59px 15px 64px;
   }
 
   .booking__text-wrapper {
@@ -1803,49 +1833,44 @@ template {
     text-align: center;
     font-size: 24px;
     line-height: 31px;
-    margin-left: 0;
     margin-bottom: 14px;
   }
 
   .booking__text-wrapper p {
     font-size: 16px;
     line-height: 22px;
-    margin: 0 0 34px;
+    margin: 0 0 33px;
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
     padding: 0 10px;
   }
 
-  .booking__form {
-    width: 290px;
-    margin-left: 0;
-    padding: 34px 0 40px;
+  .booking__form-wrapper form {
+    padding: 35px 30px 40px;
   }
 
-  .booking__form h3 {
+  .booking__form-wrapper h3 {
     text-align: center;
     line-height: 25px;
     padding: 0;
-    width: 228px;
     margin: 0 auto 29px;
   }
 
   .booking__form-input {
-    margin: 0 30px 20px;
+    margin: 0 0 19px;
   }
 
   .booking__form-input:nth-last-of-type(2) {
-    margin-bottom: 20px;
-  }
-
-  .booking__form-input input {
-    width: 230px;
+    margin-bottom: 21px;
   }
 
   .booking__form-checkbox {
-    margin-left: 58px;
     margin-bottom: 26px;
+    margin-left: 28px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
   }
 
   .booking__form-checkbox label {
