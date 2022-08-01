@@ -36,6 +36,18 @@
   }
 }
 
+.cruises__list-wrapper {
+  @media (max-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    margin: 0 56px 0 64px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 25px;
+  }
+}
+
 .cruises__list {
   margin: 0;
   padding: 0;
@@ -46,13 +58,12 @@
   gap: 30px;
 
   @media (max-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 8px;
+    grid-template-columns: repeat(auto-fit, 309px);
+    max-width: 100%;
   }
 
   @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(auto-fit, 270px);
     margin-left: 0;
   }
 }

@@ -1327,16 +1327,19 @@ template {
     margin-left: 6px;
   }
 
-  .cruises__list {
+  .cruises__list-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-left: 8px;
+    margin: 0 56px 0 64px;
+  }
+
+  .cruises__list {
+    grid-template-columns: repeat(auto-fit, 309px);
+    max-width: 100%;
   }
 
   .cruises__item img {
@@ -1797,7 +1800,12 @@ template {
     margin-left: 0;
   }
 
+  .cruises__list-wrapper {
+    margin: 0 25px;
+  }
+
   .cruises__list {
+    grid-template-columns: repeat(auto-fit, 270px);
     margin-left: 0;
   }
 
