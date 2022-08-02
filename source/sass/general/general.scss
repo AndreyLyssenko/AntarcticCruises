@@ -9,4 +9,14 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+
+  &:hover,
+  &:focus {
+    background-color: #bcd6f0;
+  }
+
+  &:active {
+    background-color: #a9d4fe;
+    color: $title-white;
+  }
 }

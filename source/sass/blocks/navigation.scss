@@ -96,6 +96,19 @@
         height: 14px;
         stroke: $title-white;
       }
+
+      &:hover,
+      &:focus {
+        .navigation__icon {
+          stroke: #bcd6f0;
+        }
+      }
+
+      &:active {
+        .navigation__icon {
+          stroke: #a9d4fe;
+        }
+      }
     }
 
     &--opened {
@@ -103,6 +116,19 @@
         width: 15px;
         height: 15px;
         stroke: $main-blue;
+      }
+
+      &:hover,
+      &:focus {
+        .navigation__icon {
+          stroke: #bcd6f0;
+        }
+      }
+
+      &:active {
+        .navigation__icon {
+          stroke: #a9d4fe;
+        }
       }
     }
   }
@@ -206,6 +232,15 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+
+  &:hover,
+  &:focus {
+    color: #bcd6f0;
+  }
+
+  &:active {
+    color: #a9d4fe;
+  }
 
   @media (max-width: $desktop-width) {
     font-size: 14px;

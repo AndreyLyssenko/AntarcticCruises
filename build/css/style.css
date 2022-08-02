@@ -429,6 +429,16 @@ template {
   line-height: 21px;
 }
 
+.button:hover,
+.button:focus {
+  background-color: #bcd6f0;
+}
+
+.button:active {
+  background-color: #a9d4fe;
+  color: #f9fbfd;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -565,6 +575,15 @@ template {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: #bcd6f0;
+}
+
+.navigation__link:active {
+  color: #a9d4fe;
 }
 
 .greetings {
@@ -984,6 +1003,11 @@ template {
   transform: translate(-50%, -50%);
 }
 
+.booking__form-checkbox input:hover + span,
+.booking__form-checkbox input:focus + span {
+  outline: 1px solid #bcd6f0;
+}
+
 .booking__button {
   width: 303px;
   margin: 0 auto;
@@ -1112,6 +1136,15 @@ template {
   text-decoration: none;
 }
 
+.footer__navigation-link:hover,
+.footer__navigation-link:focus {
+  color: #bcd6f0;
+}
+
+.footer__navigation-link:active {
+  color: #a9d4fe;
+}
+
 .footer__social-list {
   margin: 0;
   padding: 0;
@@ -1136,6 +1169,15 @@ template {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.footer__social-link:hover .footer__social-logo,
+.footer__social-link:focus .footer__social-logo {
+  fill: #bcd6f0;
+}
+
+.footer__social-link:active .footer__social-logo {
+  fill: #a9d4fe;
 }
 
 .footer__social-logo {
@@ -1606,10 +1648,28 @@ template {
     stroke: #f9fbfd;
   }
 
+  .navigation__button--closed:hover .navigation__icon,
+  .navigation__button--closed:focus .navigation__icon {
+    stroke: #bcd6f0;
+  }
+
+  .navigation__button--closed:active .navigation__icon {
+    stroke: #a9d4fe;
+  }
+
   .navigation__button--opened .navigation__icon {
     width: 15px;
     height: 15px;
     stroke: #011c40;
+  }
+
+  .navigation__button--opened:hover .navigation__icon,
+  .navigation__button--opened:focus .navigation__icon {
+    stroke: #bcd6f0;
+  }
+
+  .navigation__button--opened:active .navigation__icon {
+    stroke: #a9d4fe;
   }
 
   .navigation__wrapper {

@@ -247,6 +247,13 @@
   transform: translate(-50%, -50%);
 }
 
+.booking__form-checkbox input {
+  &:hover + span,
+  &:focus + span {
+    outline: 1px solid #bcd6f0;
+  }
+}
+
 .booking__button {
   width: 303px;
   margin: 0 auto;
