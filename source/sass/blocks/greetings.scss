@@ -1,8 +1,7 @@
 .greetings {
   width: 100%;
   color: $title-white;
-  padding-top: 165px;
-  padding-bottom: 277px;
+  padding: 165px 0 277px;
 
   @media (max-width: $desktop-width) {
     padding: 189px 0 276px;
@@ -20,12 +19,15 @@
 .greetings__wrapper {
   position: relative;
   z-index: 1;
-  width: 969px;
+  max-width: 999px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
 
   @media (max-width: $desktop-width) {
+    padding: 0;
     width: auto;
     margin-left: 49px;
   }

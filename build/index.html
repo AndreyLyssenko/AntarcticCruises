@@ -16,18 +16,20 @@
     <header class="header">
       <div class="header__wrapper">
         <nav class="navigation navigation--no-js">
-          <a class="navigation__logo-link navigation__logo-link--no-js">
-            <svg class="navigation__logo" width="70" height="38" viewBox="0 0 70 38" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <button class="navigation__button navigation__button--no-js" type="button">
-            <span class="visually-hidden">Открыть меню навигации</span>
-            <svg class="navigation__icon" width="24" height="14" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#navigation-icon-closed"></use>
-            </svg>
-          </button>
-          <div class="navigation__wrapper">
+          <div class="navigation__headline">
+            <a class="navigation__logo-link navigation__logo-link--no-js">
+              <svg class="navigation__logo" width="70" height="38" viewBox="0 0 70 38" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button class="navigation__button navigation__button--no-js" type="button">
+              <span class="visually-hidden">Открыть меню навигации</span>
+              <svg class="navigation__icon" width="24" height="14" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#navigation-icon-closed"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="navigation__wrapper navigation__wrapper--no-js">
             <ul class="navigation__list navigation__list--no-js">
               <li class="navigation__item">
                 <a class="navigation__link" href="#advantages">Преимущества</a>
@@ -61,11 +63,11 @@
           </div>
           <picture>
             <!--1x: 290px; 2x: 580px -->
-            <source type="image/webp" media="(max-width: 766px)" srcset="img/content/promo/promo-penguin-mobile.webp 1x, img/content/promo/promo-penguin-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo/promo-penguin-mobile.webp 1x, img/content/promo/promo-penguin-mobile@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="img/content/promo/promo-penguin-mobile.jpg 1x, img/content/promo/promo-penguin-mobile@2x.jpg 2x">
             <!--1x: 324px; 2x: 648px -->
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/promo/promo-penguin-tablet.webp 1x, img/content/promo/promo-penguin-tablet@2x.webp 2x">
-            <source media="(max-width: 1365px)" srcset="img/content/promo/promo-penguin-tablet.jpg 1x, img/content/promo/promo-penguin-tablet@2x.jpg 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/promo/promo-penguin-tablet.webp 1x, img/content/promo/promo-penguin-tablet@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/promo/promo-penguin-tablet.jpg 1x, img/content/promo/promo-penguin-tablet@2x.jpg 2x">
             <!--1x: 560px; 2x: 1120px -->
             <source type="image/webp" srcset="img/content/promo/promo-penguin-desktop.webp 1x, img/content/promo/promo-penguin-desktop@2x.webp 2x">
             <img src="img/content/promo/promo-penguin-desktop.jpg" srcset="img/content/promo/promo-penguin-desktop@2x.jpg 2x" width="560" height="301" alt="Пингвины Антарктики">
@@ -281,7 +283,8 @@
               </div>
               <div class="booking__form-input">
                 <label class="visually-hidden" for="phone">Ваш номер телефона:</label>
-                <input type="tel" name="phone" id="phone" pattern="^[0-9]{11}$" required placeholder="Телефон">
+                <input type="tel" name="phone" id="phone" required placeholder="Телефон">
+                <span class="booking__message">Это поле должно быть формата "+79991234567" либо "79991234567"</span>
               </div>
               <div class="booking__form-input">
                 <label class="visually-hidden" for="email">Адрес Вашей электронной почты:</label>

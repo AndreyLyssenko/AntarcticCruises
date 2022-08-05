@@ -4,9 +4,9 @@
 
 
 .footer__wrapper {
-  width: 1158px;
+  max-width: 1158px;
   margin: 0 auto;
-  padding: 51px 0;
+  padding: 51px 15px;
   align-items: center;
   display: flex;
   color: $title-white;
