@@ -546,6 +546,7 @@ template {
 
 .navigation__wrapper {
   width: auto;
+  max-width: 80%;
   margin-left: auto;
 }
 
@@ -1100,6 +1101,9 @@ template {
   line-height: 24px;
   padding-left: 28px;
   margin: 0 0 20px 0;
+  color: #011c40;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .contacts__wrapper p:last-of-type {
@@ -1156,6 +1160,8 @@ template {
   width: 70px;
   height: 38px;
   margin-right: 40px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .footer__logo {
@@ -1178,7 +1184,6 @@ template {
 
 .footer__navigation-item {
   margin-right: 33px;
-  row-gap: 10px;
 }
 
 .footer__navigation-item:last-of-type {
@@ -1200,23 +1205,39 @@ template {
 }
 
 .footer__social-list {
-  margin: 0;
+  align-self: flex-start;
+  margin: 10px 0 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (-webkit-max-content)[3];
+  -ms-grid-columns: (max-content)[3];
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  max-width: 150px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 27px;
+  -moz-column-gap: 27px;
+  column-gap: 27px;
+  row-gap: 10px;
 }
 
-.footer__social-item {
-  margin-right: 27px;
+.footer__social-item--facebook {
+  width: 11px;
+  height: 20px;
 }
 
-.footer__social-item:last-of-type {
-  margin-right: 0;
+.footer__social-item--insta {
+  width: 21px;
+  height: 20px;
+}
+
+.footer__social-item--twitter {
+  width: 20px;
+  height: 17px;
 }
 
 .footer__social-link {
@@ -1280,7 +1301,6 @@ template {
   }
 
   .navigation__list {
-    max-width: 505px;
     margin-left: 2px;
     margin-right: 41px;
   }
@@ -1518,6 +1538,10 @@ template {
     margin-left: 24px;
   }
 
+  .booking__button {
+    width: 100%;
+  }
+
   .contacts {
     width: auto;
     padding: 0 41px 49px;
@@ -1590,8 +1614,11 @@ template {
     line-height: 14px;
   }
 
-  .footer__social-item {
-    margin-right: 23px;
+  .footer__social-list {
+    margin-top: 8px;
+    -webkit-column-gap: 23px;
+    -moz-column-gap: 23px;
+    column-gap: 23px;
   }
 
   .footer__social-item--facebook {
@@ -1744,6 +1771,7 @@ template {
 
   .navigation__wrapper {
     display: none;
+    max-width: unset;
   }
 
   .navigation__wrapper--no-js {
@@ -1913,11 +1941,17 @@ template {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 0;
     margin-left: 0;
   }
 
   .advantages__item {
     min-width: 290px;
+    margin-bottom: 30px;
+  }
+
+  .advantages__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .advantages__item--all-inclusive h3 {
@@ -2000,8 +2034,13 @@ template {
     padding: 0 10px;
   }
 
+  .booking__form-wrapper {
+    padding: 1px 0;
+  }
+
   .booking__form-wrapper form {
     padding: 35px 30px 40px;
+    min-height: auto;
   }
 
   .booking__form-wrapper h3 {
@@ -2025,7 +2064,7 @@ template {
   }
 
   .booking__form-checkbox label {
-    width: 162px;
+    width: auto;
   }
 
   .booking__form-checkbox span {
@@ -2033,10 +2072,6 @@ template {
     height: 20px;
     top: 0;
     left: -28px;
-  }
-
-  .booking__button {
-    width: 230px;
   }
 
   .contacts {
@@ -2107,25 +2142,20 @@ template {
     margin-right: 95px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 12px;
     margin-bottom: 25px;
   }
 
   .footer__navigation-item {
-    margin-right: 0;
-    row-gap: 0;
+    margin-right: 13px;
+    margin-bottom: 12px;
   }
 
   .footer__navigation-item:last-of-type {
     margin-bottom: 0;
   }
 
-  .footer__social-item {
-    margin-right: 23px;
-  }
-
-  .footer__social-item:last-of-type {
-    margin-right: 0;
+  .footer__social-list {
+    margin-top: 0;
   }
 }
 

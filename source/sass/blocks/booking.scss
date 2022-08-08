@@ -111,6 +111,10 @@
   @media (max-width: $desktop-width) {
     padding: 1px 9px;
   }
+
+  @media (max-width: $tablet-width) {
+    padding: 1px 0;
+  }
 }
 
 .booking__form-wrapper form {
@@ -131,6 +135,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 35px 30px 40px;
+    min-height: auto;
   }
 }
 
@@ -234,7 +239,7 @@
   align-items: center;
 
   @media (max-width: $tablet-width) {
-    width: 162px;
+    width: auto;
   }
 }
 
@@ -280,7 +285,7 @@
   margin: 0 auto;
   min-height: 43px;
 
-  @media (max-width: $tablet-width) {
-    width: 230px;
+  @media (max-width: $desktop-width) {
+    width: 100%;
   }
 }

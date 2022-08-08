@@ -153,10 +153,12 @@
 
 .navigation__wrapper {
   width: auto;
+  max-width: 80%;
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
     display: none;
+    max-width: unset;
 
     &--no-js {
       display: block;
@@ -186,7 +188,6 @@
   z-index: 2;
 
   @media (max-width: $desktop-width) {
-    max-width: 505px;
     margin-left: 2px;
     margin-right: 41px;
   }

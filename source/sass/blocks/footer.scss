@@ -29,6 +29,7 @@
   width: 70px;
   height: 38px;
   margin-right: 40px;
+  align-self: flex-start;
 
   @media (max-width: $desktop-width) {
     width: 38px;
@@ -71,14 +72,12 @@
   @media (max-width: $tablet-width) {
     margin-right: 95px;
     flex-wrap: wrap;
-    gap: 12px;
     margin-bottom: 25px;
   }
 }
 
 .footer__navigation-item {
   margin-right: 33px;
-  row-gap: 10px;
 
   &:last-of-type {
     margin-right: 0;
@@ -89,8 +88,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin-right: 0;
-    row-gap: 0;
+    margin-right: 13px;
+    margin-bottom: 12px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -119,24 +118,44 @@
 
 
 .footer__social-list {
-  margin: 0;
+  align-self: flex-start;
+  margin: 10px 0 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  max-width: 150px;
+  align-items: center;
+  column-gap: 27px;
+  row-gap: 10px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 8px;
+    column-gap: 23px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .footer__social-item {
-  margin-right: 27px;
+  &--facebook {
+    width: 11px;
+    height: 20px;
+  }
 
-  &:last-of-type {
-    margin-right: 0;
+  &--insta {
+    width: 21px;
+    height: 20px;
+  }
+
+  &--twitter {
+    width: 20px;
+    height: 17px;
   }
 
   @media (max-width: $desktop-width) {
-    margin-right: 23px;
-
     &--facebook {
       width: 9px;
       height: 16px;
@@ -150,14 +169,6 @@
     &--twitter {
       width: 16px;
       height: 13px;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    margin-right: 23px;
-
-    &:last-of-type {
-      margin-right: 0;
     }
   }
 }
